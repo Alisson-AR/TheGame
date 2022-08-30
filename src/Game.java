@@ -13,6 +13,12 @@ public class Game{
 		Skill skill = new Skill("Fireball", 20,5);
 		Life life = new Life(100);	
 		Xp xp = new Xp(0);
+		Weapon weapon3 = new Weapon();
+		Weapon weapon4 = new Weapon("Machine Ice", 5, "Ice Panic", 40, 30);
+		
+		weapon3.setType("Sol");
+		weapon3.setDamage(20);
+
 		
 		System.out.printf(player.getName());
 		System.out.printf("%nWeapon is %s and your damage is %d", weapon.getType(),weapon.getDamage());
@@ -20,7 +26,13 @@ public class Game{
 		System.out.printf("%nCongrats you've unlocked a new Skill! %s", skill.getSkillName());
 		System.out.printf("%nYour life is %d now", life.getLife());
 		System.out.printf("%nYour XP is %d", xp.getXp());
+		System.out.printf("%nWeapon 3 your damage is %d, and your name is %S", weapon3.getDamage(), weapon3.getType());
 		
+		System.out.printf("%nWeapon 4 name is %s", weapon4.getType());
+		System.out.printf("%nWeapon 4 damage is %d", weapon4.getDamage());
+		System.out.printf("%nWeapon 4 skill is %s", weapon4.getSkillName());
+		System.out.printf("%nWeapon 4 cost of skill is %d", weapon4.getCost());
+		System.out.printf("%nWeapon 4 damage of skill is %d", weapon4.getDamag());
 	}
 	
 }
