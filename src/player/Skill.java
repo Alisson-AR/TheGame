@@ -3,12 +3,15 @@ package player;
 public class Skill {
 	private String skillName;
 	private int cost;
-	private int damage;
+	private int damag;
 	
-	public Skill(String skillName, int cost, int damage) {
+	public Skill(String skillName, int cost, int damag) {
 		this.skillName = skillName;
 		this.cost = cost;
-		this.damage = damage;
+		this.damag = damag;
+	}
+	
+	public Skill() {
 	}
 
 
@@ -28,12 +31,12 @@ public class Skill {
 		this.cost = cost;
 	}
 
-	public int getDamage() {
-		return damage;
+	public int getDamag() {
+		return damag;
 	}
 
-	public void setDamage(int damage) {
-		this.damage = damage;
+	public void setDamag(int damage) {
+		this.damag = damage;
 	}
 	
 }
