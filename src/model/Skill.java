@@ -1,4 +1,4 @@
-package player;
+package model;
 
 public class Skill {
 	private String skillName;

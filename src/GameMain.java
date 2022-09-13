@@ -4,7 +4,7 @@ import control.Controlamenu;
 
 public class GameMain{
 	public static void main (String[] args) {
-		ControlaMenu controlamenu = new ControlaMenu();
+		Controlamenu controlamenu = new Controlamenu();
 	}
 }
 

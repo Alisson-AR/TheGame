@@ -1,16 +1,10 @@
 import java.util.Scanner;
 
-import player.Life;
-import player.Player;
-import player.Skill;
-import player.Weapon;
-import player.Xp;
-
 import javax.swing.JOptionPane;
 
 // Nomes: Thiago F. Santos, Anderson L. Almeida, Alisson Rosa
 
-public class Game{
+/*public class Game{
 	public static void main (String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -85,4 +79,5 @@ public class Game{
 		input.close();
 	}
 }
+*/
 

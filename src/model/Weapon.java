@@ -1,4 +1,4 @@
-package player;
+package model;
 
 public class Weapon extends Skill{
 	private	String type;

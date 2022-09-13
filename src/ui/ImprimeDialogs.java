@@ -2,7 +2,7 @@ package ui;
 
 import javax.swing.JOptionPane;
 
-public class ImprimeMenus{
+public class ImprimeDialogs{
 	
 	public int apresentaDialogcomInputInteiro(String msg, String titulo) {
 		String OpcaoMenu;

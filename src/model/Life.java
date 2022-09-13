@@ -1,4 +1,4 @@
-package player;
+package model;
 
 public class Life {
 	private int life;

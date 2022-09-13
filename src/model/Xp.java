@@ -1,4 +1,4 @@
-package player;
+package model;
 
 public class Xp {
 	private int xp;
