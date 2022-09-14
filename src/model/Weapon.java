@@ -1,24 +1,14 @@
 package model;
 
-public class Weapon extends Skill{
-	private	String type;
+public class Weapon extends Skill {
+	private String type;
 	private int damage;
-	//Skill ice = new Skill();
-	
-	public Weapon(String type, int damage, String skillName, int cost, int damag) {
-		super(skillName, cost, damag);
-		this.type = type;
-		this.damage = damage;
-	}
-	
-	public Weapon() {
-	}
-	
+	// Skill ice = new Skill();
+
 	public Weapon(String type, int damage) {
 		this.type = type;
 		this.damage = damage;
 	}
-	
 
 	public String getType() {
 		return type;
@@ -35,5 +25,5 @@ public class Weapon extends Skill{
 	public void setDamage(int damage) {
 		this.damage = damage;
 	}
-	
+
 }

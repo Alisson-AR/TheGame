@@ -6,8 +6,12 @@ public class Player {
 	private Skill skill;
 	private Xp xp;
 	private Weapon weapon;
-	
-	public Player (String name) {
+	private Classe classe;
+
+	public Player() {
+	}
+
+	public Player(String name) {
 		this.name = name;
 	}
 
@@ -51,5 +55,11 @@ public class Player {
 		this.weapon = weapon;
 	}
 
-	
+	public Classe getClasse() {
+		return classe;
+	}
+
+	public void setClasse(Classe classe) {
+		this.classe = classe;
+	}
 }
