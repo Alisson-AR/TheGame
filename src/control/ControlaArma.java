@@ -25,12 +25,14 @@ public class ControlaArma {
     private Weapon weapon16 = new Weapon("GoldBow", 25);
     private Weapon weapon17 = new Weapon("WoodArrow", 5);
     private Weapon weapon18 = new Weapon("IronArrow", 15);
-    private Weapon weapon19 = new Weapon("TripleArrow", 25);
+    private Weapon weapon19 = new Weapon("GoldArrow", 25);
     private Weapon weapon20 = new Weapon("Wand", 2);
     private Weapon weapon21 = new Weapon("Summon", 5);
     private Weapon weapon22 = new Weapon("DragonBreath", 15);
     private Weapon weapon23 = new Weapon("FireMagic", 14);
     private Weapon weapon24 = new Weapon("WindMagic", 13);
+    private Weapon weapon25 = new Weapon("DomeShield", 6);
+    private Weapon weapon26 = new Weapon("EarthMagic", 15);
 
     public ControlaArma() {
     }
@@ -116,14 +118,32 @@ public class ControlaArma {
                 } else if (opcao == 5) {
                     Jogador.setWeapon(weapon24);
                 } else if (opcao == 6) {
-                    // Jogador.setWeapon(weapon25);
+                    Jogador.setWeapon(weapon25);
                 }
 
                 break;
             case "ELFO":
                 opcao = imprimeDialogs.apresentaDialogcomInputInteiro(
-                        "1-EarthMagic\n2-LegendarySword\n3-IronBow\n4-Dagger\n5-Spear\n6-MasterSword\n7-TripleArrow\n8-DragonBreath\n9-DomeShield",
+                        "1-EarthMagic\n2-LegendarySword\n3-IronBow\n4-Dagger\n5-Spear\n6-MasterSword\n7-DragonBreath\n8-DomeShield",
                         "SelecaoDeArma");
+
+                if (opcao == 1) {
+                    Jogador.setWeapon(weapon26);
+                } else if (opcao == 2) {
+                    Jogador.setWeapon(weapon9);
+                } else if (opcao == 3) {
+                    Jogador.setWeapon(weapon15);
+                } else if (opcao == 4) {
+                    Jogador.setWeapon(weapon10);
+                } else if (opcao == 5) {
+                    Jogador.setWeapon(weapon12);
+                } else if (opcao == 6) {
+                    Jogador.setWeapon(weapon8);
+                } else if (opcao == 7) {
+                    Jogador.setWeapon(weapon22);
+                } else if (opcao == 8) {
+                    Jogador.setWeapon(weapon25);
+                }
                 break;
             default:
                 System.out.printf(

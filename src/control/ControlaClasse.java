@@ -9,11 +9,11 @@ import model.Player;
 public class ControlaClasse {
     ImprimeDialogs imprimeDialogs = new ImprimeDialogs();
 
-    Life lifeSoldier = new Life(95);
+    Life lifeSoldier = new Life(80);
     Life lifeGuerreiro = new Life(100);
-    Life lifeArqueiro = new Life(98);
-    Life lifeMago = new Life(80);
-    Life lifeElfo = new Life(90);
+    Life lifeArqueiro = new Life(70);
+    Life lifeMago = new Life(60);
+    Life lifeElfo = new Life(65);
 
     Classe classe1 = new Classe("SOLDIER", lifeSoldier);
     Classe classe2 = new Classe("GUERREIRO", lifeGuerreiro);
@@ -26,7 +26,6 @@ public class ControlaClasse {
     }
 
     public void selecionaClasse(int opcaoClasse, Player jogador) {
-        int opcao;
         switch (opcaoClasse) {
             case 1:
                 jogador.setClasse(classe1);
@@ -48,5 +47,6 @@ public class ControlaClasse {
                         "Nenhuma classe foi escolhida, escolha alguma classe válida");
                 break;
         }
+        jogador.setLife(jogador.getClasse().getLife());
     }
 }

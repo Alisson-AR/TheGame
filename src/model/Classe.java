@@ -19,4 +19,13 @@ public class Classe {
         this.name = name;
     }
 
+    public Life getLife() {
+        return this.life;
+    }
+
+    public void setLife(Life life) {
+        this.life = life;
+    }
+
+
 }

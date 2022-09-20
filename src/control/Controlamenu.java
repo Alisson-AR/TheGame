@@ -47,7 +47,7 @@ public class Controlamenu {
 		int opcao2;
 
 		opcao = imprimeDialogs.apresentaDialogcomInputInteiro(
-				"1-Selecionar Classe\n2-Selecionar Arma\n3-Selecionar Skill\n4-Sair",
+				"1-Selecionar Classe\n2-Selecionar Arma\n3-Selecionar Skill\n4-Mostra Personagem\n5-Sair",
 				"CriacaoPersonagem");
 
 		switch (opcao) {
@@ -57,18 +57,37 @@ public class Controlamenu {
 						"1-Soldier \n2-Guerreiro \n3-Arqueiro \n4-Mago \n5-Elfo \n6-Sair",
 						"Escolha Classe");
 				controleClasse.selecionaClasse(opcao2, controlePersonagem.getPlayer());
+				menuCriacaoPersonagem();
 				break;
 
 			case 2:
-				controleArma.SelecionaArma(controlePersonagem.getPlayer());
+				if (controlePersonagem.getPlayer().getClasse() == null) {
+					imprimeDialogs.apresentaDialogError("Jogador você deve antes escolher uma classe.", "Error");
+				} else {
+					controleArma.SelecionaArma(controlePersonagem.getPlayer());
+				}
 				menuCriacaoPersonagem();
 				break;
 
 			case 3:
+				imprimeDialogs.apresentaDialogInformation("As habilidades ainda nao foram implementadas",
+						"Escolha Skill");
+				menuCriacaoPersonagem();
 				break;
 
 			case 4:
-			System.out.printf("Saindo da Criacao Personagem");
+				if (controlePersonagem.getPlayer().getClasse() == null || controlePersonagem.getPlayer().getWeapon() == null) {
+					imprimeDialogs.apresentaDialogError("Jogador você deve antes escolher uma classe e uma arma.", "Error");
+				} else {
+					String msg = controlePersonagem.MostraDadosPlayer();
+					imprimeDialogs.apresentaDialogInformation(msg, "Dados Jogador");
+				}
+
+				menuCriacaoPersonagem();
+				break;
+
+			case 5:
+				System.out.printf("Saindo da Criacao Personagem");
 				break;
 		}
 	}

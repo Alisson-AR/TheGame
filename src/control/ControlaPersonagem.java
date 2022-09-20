@@ -7,10 +7,6 @@ public class ControlaPersonagem {
 
     private Player jogador1 = new Player();
 
-    public ControlaPersonagem() {
-        // jogador1.setName("Angel");
-    }
-
     public void setName(String nome) {
         jogador1.setName(nome);
     }
@@ -21,6 +17,13 @@ public class ControlaPersonagem {
 
     public Player getPlayer() {
         return this.jogador1;
+    }
+
+    public String MostraDadosPlayer(){
+        String mensagem;
+        mensagem = "Dados do Jogador: " + this.jogador1.getName() + "\n\nVida: " + this.jogador1.getLife().getLife() + "\nClasse Escolhida: " + this.jogador1.getClasse().getName() +
+        "\nArma Escolhida: " + this.jogador1.getWeapon().getType() + "\n"+ "Dano da Arma: "+this.jogador1.getWeapon().getDamage();
+        return mensagem;
     }
 
 }
