@@ -9,7 +9,7 @@
             "name": "Launch GameMain",
             "request": "launch",
             "mainClass": "GameMain",
-            "projectName": "The_Game_V1"
+            "projectName": "The_Game_V2"
         }
     ]
 }
