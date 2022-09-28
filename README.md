@@ -1,5 +1,7 @@
 # Algumas Adições para o futuro
 
+* Implementar ao escolher uma opcao ela sumir
+
  * //SOLDIER
  
  * Skill skill1 = new Skill("ExplosionKing",12,16);

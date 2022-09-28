@@ -8,6 +8,7 @@ public class Controlamenu {
 	ControlaPersonagem controlePersonagem = new ControlaPersonagem();
 	ControlaClasse controleClasse = new ControlaClasse();
 	ControlaArma controleArma = new ControlaArma();
+	ControlaBatalha controleBatalha = new ControlaBatalha();
 
 	public Controlamenu() {
 		boolean controlaWhile = true;
@@ -21,7 +22,7 @@ public class Controlamenu {
 		int opcao;
 		boolean whileControl = true;
 
-		opcao = imprimeDialogs.apresentaDialogcomInputInteiro("1-Criar Personagem\n2-Sair",
+		opcao = imprimeDialogs.apresentaDialogcomInputInteiro("1-Criar Personagem\n2-Batalhar\n3-Sair",
 				"TheGame");
 
 		switch (opcao) {
@@ -35,6 +36,16 @@ public class Controlamenu {
 				break;
 
 			case 2:
+				if (controlePersonagem.getPlayer().getClasse() == null
+						|| controlePersonagem.getPlayer().getWeapon() == null) {
+					imprimeDialogs.apresentaDialogError("Jogador voce deve criar um personagem antes de batalhar.",
+							"Error");
+				} else {
+					controleBatalha.IniciaBatalha(controlePersonagem.getPlayer());
+				}
+
+				break;
+			case 3:
 				whileControl = false;
 				break;
 		}
@@ -45,7 +56,7 @@ public class Controlamenu {
 	public void menuCriacaoPersonagem() {
 		int opcao;
 		int opcao2;
-
+		
 		opcao = imprimeDialogs.apresentaDialogcomInputInteiro(
 				"1-Selecionar Classe\n2-Selecionar Arma\n3-Selecionar Skill\n4-Mostra Personagem\n5-Sair",
 				"CriacaoPersonagem");
@@ -76,8 +87,10 @@ public class Controlamenu {
 				break;
 
 			case 4:
-				if (controlePersonagem.getPlayer().getClasse() == null || controlePersonagem.getPlayer().getWeapon() == null) {
-					imprimeDialogs.apresentaDialogError("Jogador você deve antes escolher uma classe e uma arma.", "Error");
+				if (controlePersonagem.getPlayer().getClasse() == null
+						|| controlePersonagem.getPlayer().getWeapon() == null) {
+					imprimeDialogs.apresentaDialogError("Jogador você deve antes escolher uma classe e uma arma.",
+							"Error");
 				} else {
 					String msg = controlePersonagem.MostraDadosPlayer();
 					imprimeDialogs.apresentaDialogInformation(msg, "Dados Jogador");
