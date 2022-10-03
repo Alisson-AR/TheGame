@@ -3,7 +3,6 @@ package model;
 public class Weapon extends Skill {
 	private String type;
 	private int damage;
-	// Skill ice = new Skill();
 
 	public Weapon(String type, int damage) {
 		this.type = type;

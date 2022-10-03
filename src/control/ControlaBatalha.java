@@ -40,6 +40,7 @@ public class ControlaBatalha{
         boolean controlaDano = true;
         int opcao;
 
+        imprimeDialogs.apresentaDialogInformation("BATALHA CONTRA "+Listainimigos.get(ContadorInimigos).getName(),"INICIANDO BATALHA");
 
         while (controlaDano == true){
 
@@ -68,9 +69,7 @@ public class ControlaBatalha{
                     break;
     
                 case 2:
-
-
-                    AtaqueInimigo(jogador,Listainimigos.get(ContadorInimigos));
+                    DefesaJogador(jogador,Listainimigos.get(ContadorInimigos));
                     break;
             }
         }
@@ -89,8 +88,8 @@ public class ControlaBatalha{
 
         jogador.getLife().setLife(vidaJogador);
 
-        imprimeDialogs.apresentaDialogInformation("Vida do Inimigo = "+ vidaInicialJogador + "\n Vida do Inimigo = " + inimigo.getLife().getLife() + "\n Dano causado no inimigo = " + danoDoInimigo,
-        "Batalha Contra "+ inimigo.getName() + "- Ataque Inimigo");
+        imprimeDialogs.apresentaDialogInformation("Vida do Player = "+ vidaInicialJogador + "\nVida do Inimigo = " + inimigo.getLife().getLife() + "\nDano sofrido do inimigo = " + danoDoInimigo,
+        "Batalha Contra "+ inimigo.getName() + " - Ataque Inimigo");
 
     }
 
@@ -107,8 +106,33 @@ public class ControlaBatalha{
 
         inimigo.getLife().setLife(vidaInimigo);
 
-        imprimeDialogs.apresentaDialogInformation("Vida do Player = "+jogador.getLife().getLife() + "\n Vida do Inimigo = " + vidaInicialInimigo + "\n Dano causado no inimigo = " + danoDoJogador,
-        "Batalha Contra "+ inimigo.getName() + "- Ataque Player");
+        imprimeDialogs.apresentaDialogInformation("Vida do Player = "+jogador.getLife().getLife() + "\nVida do Inimigo = " + vidaInicialInimigo + "\nDano causado no inimigo = " + danoDoJogador,
+        "Batalha Contra "+ inimigo.getName() + " - Ataque Player");
+    }
+
+    public void DefesaJogador(Player jogador, Enemy inimigo){
+        Random gerador = new Random();
+        int danoDoInimigo = inimigo.getWeapon().getDamage();
+
+        danoDoInimigo = gerador.nextInt(danoDoInimigo);
+
+        int defesaDoJogador = jogador.getDefense().getDefense();
+
+        if(defesaDoJogador >= danoDoInimigo){
+            imprimeDialogs.apresentaDialogInformation("Ataque foi defendido, você não sofrera dano nessa rodada!", "DefesaJogador");
+        }else{
+            imprimeDialogs.apresentaDialogInformation("Ataque não foi defendido!", "DefesaJogador");
+
+            int vidaJogador = jogador.getLife().getLife();
+            int vidaInicialJogador = vidaJogador;
+    
+            vidaJogador = (vidaJogador - danoDoInimigo); 
+    
+            jogador.getLife().setLife(vidaJogador);
+    
+            imprimeDialogs.apresentaDialogInformation("Vida do Inimigo = "+ vidaInicialJogador + "\nVida do Inimigo = " + inimigo.getLife().getLife() + "\nDano causado no inimigo = " + danoDoInimigo,
+            "Batalha Contra "+ inimigo.getName() + " - Ataque Inimigo");
+        }
     }
 
 }

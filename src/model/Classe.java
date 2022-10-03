@@ -5,10 +5,12 @@ import model.Life;
 public class Classe {
     private String name;
     private Life life;
+    private Defense defense;
 
-    public Classe(String name, Life life) {
+    public Classe(String name, Life life, Defense defense) {
         this.life = life;
         this.name = name;
+        this.defense = defense;
     }
 
     public String getName() {
@@ -25,6 +27,14 @@ public class Classe {
 
     public void setLife(Life life) {
         this.life = life;
+    }
+
+    public Defense getDefense() {
+        return this.defense;
+    }
+
+    public void setDefense(Defense defense) {
+        this.defense = defense;
     }
 
 

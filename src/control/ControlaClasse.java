@@ -5,6 +5,7 @@ import ui.ImprimeDialogs;
 import model.Classe;
 import model.Life;
 import model.Player;
+import model.Defense;
 
 public class ControlaClasse {
     ImprimeDialogs imprimeDialogs = new ImprimeDialogs();
@@ -15,11 +16,17 @@ public class ControlaClasse {
     Life lifeMago = new Life(60);
     Life lifeElfo = new Life(65);
 
-    Classe classe1 = new Classe("SOLDIER", lifeSoldier);
-    Classe classe2 = new Classe("GUERREIRO", lifeGuerreiro);
-    Classe classe3 = new Classe("ARQUEIRO", lifeArqueiro);
-    Classe classe4 = new Classe("MAGO", lifeMago);
-    Classe classe5 = new Classe("ELFO", lifeElfo);
+    Defense defenseSoldier = new Defense(30);
+    Defense defenseGuerreiro = new Defense(40);
+    Defense defenseArqueiro = new Defense(25);
+    Defense defenseMago = new Defense(15);
+    Defense defenseElfo = new Defense(20);
+
+    Classe classe1 = new Classe("SOLDIER", lifeSoldier, defenseSoldier);
+    Classe classe2 = new Classe("GUERREIRO", lifeGuerreiro, defenseGuerreiro);
+    Classe classe3 = new Classe("ARQUEIRO", lifeArqueiro, defenseArqueiro);
+    Classe classe4 = new Classe("MAGO", lifeMago, defenseMago);
+    Classe classe5 = new Classe("ELFO", lifeElfo, defenseElfo);
 
     public ControlaClasse() {
 
@@ -48,5 +55,6 @@ public class ControlaClasse {
                 break;
         }
         jogador.setLife(jogador.getClasse().getLife());
+        jogador.setDefense(jogador.getClasse().getDefense());
     }
 }

@@ -7,6 +7,7 @@ public class Player {
 	private Xp xp;
 	private Weapon weapon;
 	private Classe classe;
+	private Defense defense;
 
 	public Player() {
 	}
@@ -61,5 +62,13 @@ public class Player {
 
 	public void setClasse(Classe classe) {
 		this.classe = classe;
+	}
+
+	public Defense getDefense() {
+		return defense;
+	}
+
+	public void setDefense(Defense defense) {
+		this.defense = defense;
 	}
 }

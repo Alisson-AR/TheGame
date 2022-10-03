@@ -4,7 +4,6 @@ public class Enemy {
 	private String name;
 	private Life life;
 	private Weapon weapon;
-	private Classe classe;
 
 	public Enemy(String name, Weapon weapon,Life life) {
 		this.name = name;
