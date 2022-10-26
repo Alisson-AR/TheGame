@@ -1,6 +1,6 @@
 package model;
 
-public class Player {
+public class Player implements Pessoa {
 	private String name;
 	private Life life;
 	private Skill skill;
