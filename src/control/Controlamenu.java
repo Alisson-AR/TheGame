@@ -56,7 +56,7 @@ public class Controlamenu {
 	public void menuCriacaoPersonagem() {
 		int opcao;
 		int opcao2;
-		
+
 		opcao = imprimeDialogs.apresentaDialogcomInputInteiro(
 				"1-Selecionar Classe\n2-Selecionar Arma\n3-Selecionar Skill\n4-Mostra Personagem\n5-Sair",
 				"CriacaoPersonagem");
@@ -76,6 +76,7 @@ public class Controlamenu {
 					imprimeDialogs.apresentaDialogError("Jogador você deve antes escolher uma classe.", "Error");
 				} else {
 					controleArma.SelecionaArma(controlePersonagem.getPlayer());
+					// Object imagem = controleArma.ImagemArma();
 				}
 				menuCriacaoPersonagem();
 				break;
