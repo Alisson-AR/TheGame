@@ -12,6 +12,8 @@ public class Controlamenu {
 
 	public Controlamenu() {
 		boolean controlaWhile = true;
+		
+		imprimeDialogs.apresentaDiaologImage("", "The Game", "TheGame.png");
 
 		while (controlaWhile) {
 			controlaWhile = menuPrincipal();

@@ -48,7 +48,7 @@ public class ControlaBatalha{
                 controlaDano = false;
                 imprimeDialogs.apresentaDialogInformation("YOU LOSEE!!!!!!!!!",
                 "YOU LOSEE!!!!!!!!!");
-                
+                System.exit(0);
             }
             opcao = imprimeDialogs.apresentaDialogcomInputInteiro("1-Atacar\n2-Defender",
             "Batalha");

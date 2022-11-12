@@ -1,8 +1,9 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
-public class ImprimeDialogs {
+ 	public class ImprimeDialogs {
 
 	public int apresentaDialogcomInputInteiro(String msg, String titulo) {
 		String OpcaoMenu;
@@ -69,6 +70,8 @@ public class ImprimeDialogs {
 	}
 
 	public void apresentaDiaologImage(String msg, String titulo, String Imagem) {
-
+		String imagem = System.getProperty("user.dir")+"\\src\\imagens\\"+Imagem;
+		ImageIcon icon = new ImageIcon(imagem);
+		JOptionPane.showMessageDialog(null, msg, titulo, JOptionPane.INFORMATION_MESSAGE, icon);
 	}
 }

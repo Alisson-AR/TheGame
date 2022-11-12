@@ -7,8 +7,7 @@ import model.Weapon;
 public class GameMain {
 	public static void main(String[] args) {
 
-		ControlaMusica Musica = new ControlaMusica(
-				"C:\\Users\\Micro\\Desktop\\TheGame-master\\src\\musicTheme\\MusicaTheGame.wav");
+		ControlaMusica Musica = new ControlaMusica(System.getProperty("user.dir")+"\\src\\musicTheme\\MusicaTheGame.wav");
 
 		Controlamenu controlamenu = new Controlamenu();
 	}
