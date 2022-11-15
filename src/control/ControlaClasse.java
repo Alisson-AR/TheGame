@@ -54,7 +54,12 @@ public class ControlaClasse {
                         "Nenhuma classe foi escolhida, escolha alguma classe válida");
                 break;
         }
-        jogador.setLife(jogador.getClasse().getLife());
-        jogador.setDefense(jogador.getClasse().getDefense());
+        try{
+            imprimeDialogs.apresentaDiaologImage("", "Classe " + jogador.getClasse().getName() + " Selecionada", ("Classes\\"+jogador.getClasse().getName()+".gif"));
+            jogador.setLife(jogador.getClasse().getLife());
+            jogador.setDefense(jogador.getClasse().getDefense());
+        }catch(Exception e){
+            System.out.printf("\nClasse nao selecionada!!!");
+        }
     }
 }

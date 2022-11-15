@@ -41,7 +41,7 @@ public class ControlaBatalha{
         int opcao;
 
         imprimeDialogs.apresentaDialogInformation("BATALHA CONTRA "+Listainimigos.get(ContadorInimigos).getName(),"INICIANDO BATALHA");
-
+        imprimeDialogs.apresentaDiaologImage("", Listainimigos.get(ContadorInimigos).getName(), ("Enemys\\"+Listainimigos.get(ContadorInimigos).getName()+".gif"));
         while (controlaDano == true){
 
             if(jogador.getLife().getLife() <= 0){

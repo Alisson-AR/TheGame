@@ -6,9 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch ControlaImageIcon",
+            "name": "Launch GameMain",
             "request": "launch",
-            "mainClass": "control.ControlaImageIcon",
+            "mainClass": "GameMain",
             "projectName": "The_Game_V2"
         },
         {
