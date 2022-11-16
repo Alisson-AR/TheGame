@@ -3,15 +3,6 @@ package control;
 import ui.ImprimeDialogs;
 import model.Weapon;
 
-import java.awt.FlowLayout;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
 import model.Player;
 
 public class ControlaArma {
@@ -48,7 +39,7 @@ public class ControlaArma {
     }
 
     public void SelecionaArma(Player Jogador) {
-        int opcao;
+        int opcao=0;
         switch (Jogador.getClasse().getName()) {
             case "SOLDIER":
                 opcao = imprimeDialogs.apresentaDialogcomInputInteiro(
@@ -69,6 +60,7 @@ public class ControlaArma {
                     Jogador.setWeapon(weapon6);
                 }else{
                     imprimeDialogs.apresentaDialogWarning("Você digitou um valor que não corresponde a nenhuma arma de sua Classe. Tente novamente!", "Escolha da Arma");
+                    return;
                 }
 
                 break;
@@ -93,6 +85,7 @@ public class ControlaArma {
                     Jogador.setWeapon(weapon13);
                 }else{
                     imprimeDialogs.apresentaDialogWarning("Você digitou um valor que não corresponde a nenhuma arma de sua Classe. Tente novamente!", "Escolha da Arma");
+                    return;
                 }
 
                 break;
@@ -115,6 +108,7 @@ public class ControlaArma {
                     Jogador.setWeapon(weapon19);
                 }else{
                     imprimeDialogs.apresentaDialogWarning("Você digitou um valor que não corresponde a nenhuma arma de sua Classe. Tente novamente!", "Escolha da Arma");
+                    return;
                 }
 
                 break;
@@ -137,6 +131,7 @@ public class ControlaArma {
                     Jogador.setWeapon(weapon25);
                 }else{
                     imprimeDialogs.apresentaDialogWarning("Você digitou um valor que não corresponde a nenhuma arma de sua Classe. Tente novamente!", "Escolha da Arma");
+                    return;
                 }
 
                 break;
@@ -163,6 +158,7 @@ public class ControlaArma {
                     Jogador.setWeapon(weapon25);
                 }else{
                     imprimeDialogs.apresentaDialogWarning("Você digitou um valor que não corresponde a nenhuma arma de sua Classe. Tente novamente!", "Escolha da Arma");
+                    return;
                 }
 
                 break;
